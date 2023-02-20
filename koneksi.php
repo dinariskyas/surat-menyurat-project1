@@ -1,5 +1,6 @@
 <?php
 
+// pendeklarasian database
 $nama_server    = "localhost";
 $username       = "root";
 $password       = "";

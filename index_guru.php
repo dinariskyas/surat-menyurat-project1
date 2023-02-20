@@ -25,6 +25,7 @@ include 'koneksi.php';
 
 <body>
 
+    <!-- navbar -->
     <nav>
         <div class="container">
             <div class="nav-wrapper">
@@ -39,13 +40,16 @@ include 'koneksi.php';
             </div>
         </div>
     </nav>
+    <!-- end navbar -->
 
-
+    <!-- content -->
     <div class="container">
         <center>
             <img src="assets/surat.png" style="height: 350px;margin-top: 55px;">
         </center>
     </div>
+    <!-- end content -->
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>

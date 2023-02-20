@@ -31,6 +31,8 @@ include "koneksi.php";
     $query = mysqli_query($koneksi, $SQL);
 
     ?>
+
+    <!-- navbar -->
     <nav>
         <div class="container">
             <div class="nav-wrapper">
@@ -45,7 +47,9 @@ include "koneksi.php";
             </div>
         </div>
     </nav>
+    <!-- end navbar -->
 
+    <!-- content -->
     <div class="container">
         <div class="row" style="margin-top: 24px;">
             <div class="col s12">
@@ -98,6 +102,7 @@ include "koneksi.php";
         </div>
 
     </div>
+    <!-- end content -->
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

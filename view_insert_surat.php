@@ -24,6 +24,7 @@ include "koneksi.php";
 </head>
 
 <body>
+    <!-- navbar -->
     <nav>
         <div class="container">
             <div class="nav-wrapper">
@@ -38,6 +39,9 @@ include "koneksi.php";
             </div>
         </div>
     </nav>
+    <!-- end navbar -->
+
+    <!-- content -->
     <div class="container">
         <div class="row" style="margin-top: 24px;">
             <div class="col s12">
@@ -81,7 +85,7 @@ include "koneksi.php";
                                 </div>
                                 <div class="col s4">
                                     <a href="home_surat.php" class="waves-effect waves-light btn"><i class="material-icons left">arrow_back</i>Back</a>
-                                    <a class="waves-effect waves-light btn" type="submit" name="action" style="background-color: #CD5C5C;"><i class="material-icons right">send</i>Submit</a>
+                                    <button class="waves-effect waves-light btn" type="submit" name="action" style="background-color: #CD5C5C;"><i class="material-icons right">send</i>Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -91,6 +95,8 @@ include "koneksi.php";
         </div>
 
     </div>
+    <!-- end content -->
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 

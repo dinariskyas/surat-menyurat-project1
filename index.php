@@ -25,6 +25,7 @@ include 'koneksi.php';
 
 <body>
 
+    <!-- navbar -->
     <nav>
         <div class="container">
             <div class="nav-wrapper">
@@ -38,8 +39,9 @@ include 'koneksi.php';
             </div>
         </div>
     </nav>
+    <!-- end navbar -->
 
-
+    <!-- content -->
     <div class="container">
         <marquee style="font-family: Book Antiqua;" behavior="alternate">
             <b>
@@ -50,6 +52,8 @@ include 'koneksi.php';
             <img src="assets/img1.png" style="height: 250px;margin-top: 10px;">
         </center>
     </div>
+    <!-- end content -->
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>

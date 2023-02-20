@@ -43,6 +43,7 @@ include "koneksi.php";
 
     ?>
 
+        <!-- navbar -->
         <nav>
             <div class="container">
                 <div class="nav-wrapper">
@@ -57,7 +58,9 @@ include "koneksi.php";
                 </div>
             </div>
         </nav>
+        <!-- end navbar -->
 
+        <!-- content -->
         <div class="container">
             <div class="row" style="margin-top: 24px;">
                 <div class="col s12">
@@ -102,7 +105,7 @@ include "koneksi.php";
                                     </div>
                                     <div class="col s4">
                                         <a href="home_surat_guru.php" class="waves-effect waves-light btn"><i class="material-icons left">arrow_back</i>Back</a>
-                                        <a class="waves-effect waves-light btn" type="submit" name="action" style="background-color: #CD5C5C;"><i class="material-icons right">send</i>Update</a>
+                                        <button class="waves-effect waves-light btn" type="submit" name="action" style="background-color: #CD5C5C;"><i class="material-icons right">send</i>Update</button>
                                     </div>
                                 </div>
                             </form>
@@ -111,6 +114,7 @@ include "koneksi.php";
                 </div>
             </div>
         </div>
+        <!-- end content -->
 
     <?php
     // sebagai akhiran while (perulangan)

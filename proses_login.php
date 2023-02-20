@@ -1,14 +1,21 @@
 <?php
 
+// Koneksi
 include 'koneksi.php';
+
 //mengaktifkan session
 session_start();
 
+// Ambil variabel
 $username   = $_POST['username'];
 $password   = $_POST['password'];
 
+// Penulisan SQL (telah diuji di phpmyadmin)
 $SQL = "SELECT * FROM user WHERE username = '$username' and password ='$password'";
+
+// Eksekusi SQL query dengan fungsi PHP
 $query = mysqli_query($koneksi, $SQL);
+
 //menghitung jumlah data
 $cek = mysqli_num_rows($query);
 
