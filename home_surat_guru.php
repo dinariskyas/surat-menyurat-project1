@@ -60,61 +60,64 @@ include "koneksi.php";
                         </span>
                         <hr>
                         <br>
-
-                        <table class="highlight">
-                            <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Keterangan</th>
-                                    <th>Alamat</th>
-                                    <th>Keterangan</th>
-                                    <th>Status</th>
-                                    <th>Opsi</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <?php
-                                $No = 1;
-                                while ($kolom = mysqli_fetch_array($query)) { ?>
+                        <div class="float-right">
+                            <a href="excel_home_surat_guru.php" target="_blank" type="button" class="btn waves-effect waves-light" name="action" style="background-color: brown;">Cetak Data Surat
+                                <i class="material-icons left">print</i>
+                            </a>
+                            <table class="highlight">
+                                <thead>
                                     <tr>
-                                        <td><?php echo $No++; ?></td>
-                                        <td><?php echo $kolom["tanggal_sakit"] ?></td>
-                                        <td><?php echo $kolom["alamat"] ?></td>
-                                        <td><?php echo $kolom["keterangan"] ?></td>
-                                        <td><?php echo $kolom["status"] ?></td>
-                                        <td>
-                                            <a href="view_update_surat_guru.php?id_surat=<?php echo $kolom["id_surat"] ?>" ype="button" class="btn waves-effect waves-light" type="submit" name="action">Update
-                                                <i class="material-icons">edit</i>
-                                            </a>
-                                        </td>
+                                        <th>No</th>
+                                        <th>Keterangan</th>
+                                        <th>Alamat</th>
+                                        <th>Keterangan</th>
+                                        <th>Status</th>
+                                        <th>Opsi</th>
                                     </tr>
-                                <?php } ?>
-                            </tbody>
-                        </table>
+                                </thead>
+
+                                <tbody>
+                                    <?php
+                                    $No = 1;
+                                    while ($kolom = mysqli_fetch_array($query)) { ?>
+                                        <tr>
+                                            <td><?php echo $No++; ?></td>
+                                            <td><?php echo $kolom["tanggal_sakit"] ?></td>
+                                            <td><?php echo $kolom["alamat"] ?></td>
+                                            <td><?php echo $kolom["keterangan"] ?></td>
+                                            <td><?php echo $kolom["status"] ?></td>
+                                            <td>
+                                                <a href="view_update_surat_guru.php?id_surat=<?php echo $kolom["id_surat"] ?>" ype="button" class="btn waves-effect waves-light" type="submit" name="action">Update
+                                                    <i class="material-icons">edit</i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
+        <!-- end content -->
 
-    </div>
-    <!-- end content -->
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('select');
+                var instances = M.FormSelect.init(elems, options);
+            });
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('select');
-            var instances = M.FormSelect.init(elems, options);
-        });
+            // Or with jQuery
 
-        // Or with jQuery
-
-        $(document).ready(function() {
-            $('select').formSelect();
-        });
-    </script>
+            $(document).ready(function() {
+                $('select').formSelect();
+            });
+        </script>
 </body>
 
 </html>

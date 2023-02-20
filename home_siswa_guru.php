@@ -60,47 +60,51 @@ include "koneksi.php";
                         </span>
                         <hr>
                         <br>
+                        <div class="float-right">
+                            <a href="excel_home_siswa_guru.php" target="_blank" type="button" class="btn waves-effect waves-light" name="action" style="background-color: brown;">Cetak Data Siswa
+                                <i class="material-icons left">print</i>
+                            </a>
 
-                        <table class="highlight">
-                            <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Nama</th>
-                                    <th>Email</th>
-                                    <th>NIS</th>
-                                    <th>Kelas</th>
-                                    <th>No.Telp Ortu</th>
-                                    <th>Status</th>
-                                    <th>Opsi</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <?php
-                                $No = 1;
-                                while ($kolom = mysqli_fetch_array($query)) { ?>
+                            <table class="highlight">
+                                <thead>
                                     <tr>
-                                        <td><?php echo $No++; ?></td>
-                                        <td><?php echo $kolom["nama"] ?></td>
-                                        <td><?php echo $kolom["username"] ?></td>
-                                        <td><?php echo $kolom["nis"] ?></td>
-                                        <td><?php echo $kolom["kelas"] ?></td>
-                                        <td><?php echo $kolom["telp_ortu"] ?></td>
-                                        <td><?php echo $kolom["status"] ?></td>
-                                        <td>
-                                            <a href="view_update_siswa_guru.php?id_user=<?php echo $kolom["id_user"] ?>" type="button" class="btn waves-effect waves-light" type="submit" name="action">Update
-                                                <i class="material-icons">edit</i>
-                                            </a>
-                                        </td>
+                                        <th>No</th>
+                                        <th>Nama</th>
+                                        <th>Email</th>
+                                        <th>NIS</th>
+                                        <th>Kelas</th>
+                                        <th>No.Telp Ortu</th>
+                                        <th>Status</th>
+                                        <th>Opsi</th>
                                     </tr>
-                                <?php } ?>
-                            </tbody>
-                        </table>
+                                </thead>
+
+                                <tbody>
+                                    <?php
+                                    $No = 1;
+                                    while ($kolom = mysqli_fetch_array($query)) { ?>
+                                        <tr>
+                                            <td><?php echo $No++; ?></td>
+                                            <td><?php echo $kolom["nama"] ?></td>
+                                            <td><?php echo $kolom["username"] ?></td>
+                                            <td><?php echo $kolom["nis"] ?></td>
+                                            <td><?php echo $kolom["kelas"] ?></td>
+                                            <td><?php echo $kolom["telp_ortu"] ?></td>
+                                            <td><?php echo $kolom["status"] ?></td>
+                                            <td>
+                                                <a href="view_update_siswa_guru.php?id_user=<?php echo $kolom["id_user"] ?>" type="button" class="btn waves-effect waves-light" name="action">Update
+                                                    <i class="material-icons">edit</i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
     <!-- end content -->
 
